@@ -5,31 +5,36 @@ public class Test {
     public void test1() {
         CoffeeController c = new CoffeeController();
         double result = c.m4("70");
-        assert result == 70;
+        assert check(result, 70.0);
     }
     
     public void test2() {
         CoffeeController c = new CoffeeController();
         double result = c.m4("100");
-        assert result == 95.0;
+        assert check(result, 95.0);
     }
     
     public void test3() {
         CoffeeController c = new CoffeeController();
         double result = c.m4("180");
-        assert result == 171.0;
+        assert check(result, 171.0);
     }
     
     public void test4() {
         CoffeeController c = new CoffeeController();
         double delta = 0.00000001;
         double result = c.m4("101");
-        assert 95.95 - delta <= result && result <= 95.95 + delta;
+        assert check(result, 95.95);
     }
     
     public void test5() {
         CoffeeController c = new CoffeeController();
         double result = c.m4("Love");
-        assert result == -1.0;
+        assert check(result, -1.0);
+    }
+    
+    boolean check(double result, double expected) {
+        double delta = 0.00000001;
+        return expected - delta <= result && result <= expected + delta;
     }
 }
