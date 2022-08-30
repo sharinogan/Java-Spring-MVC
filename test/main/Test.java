@@ -38,3 +38,12 @@ public class Test {
         return expected - delta <= result && result <= expected + delta;
     }
 }
+
+//  UAT - User Acceptance Test
+//  Test Case
+//  Number			Description			Expected Result      Actual Result
+//    1				Enter 70			    70.0
+//    2				Enter 100 		            95.0
+//    3				Enter 180			   171.0
+//    4				Enter 101                          95.95
+//    5				Enter Love                          -1.0
