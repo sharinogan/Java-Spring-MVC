@@ -22,8 +22,9 @@ public class Test {
     
     public void test4() {
         CoffeeController c = new CoffeeController();
+        double delta = 0.00000001;
         double result = c.m4("101");
-        assert result == 95.95;
+        assert 95.95 - delta <= result && result <= 95.95 + delta;
     }
     
     public void test5() {
