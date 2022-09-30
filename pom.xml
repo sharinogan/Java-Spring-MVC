@@ -12,8 +12,8 @@
     </repositories>
     
     <properties>
-        <maven.compiler.source>18</maven.compiler.source>
-        <maven.compiler.target>18</maven.compiler.target>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
     </properties>
     
     <build>
@@ -30,7 +30,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
-            <version>3.0.0-M4</version>
+            <version>3.0.0-M5</version>
         </dependency>
         
     </dependencies>
